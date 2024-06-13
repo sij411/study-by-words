@@ -8,7 +8,7 @@ const { href, title } = Astro.props;
 ---
 
 <div>
-  <a href={href}><span>{title}</span></a>
+  <a href={href}>{title}</a>
 </div>
 
 
@@ -16,6 +16,9 @@ const { href, title } = Astro.props;
     div {
        padding: 0;
        margin: 0; 
+       text-align: center;
+       display: flex;
+       align-items: center;
     }
     a {
         width: 100%;
@@ -24,5 +27,6 @@ const { href, title } = Astro.props;
         font-size: 2rem;
         font-weight: 500;
         filter: blur(1.3px);
+        text-align: center;
     }
 </style>
