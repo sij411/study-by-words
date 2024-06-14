@@ -9,7 +9,7 @@ const words = await getCollection('word');
         {
             words.map((word) => (
                 <li>
-                        <h2 class="title">{word.data.englishTitle}</h2>
+                        <h2 class="title">{word.data.title}</h2>
                        <p>
                         {word.data.description}
                        </p>
