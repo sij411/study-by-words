@@ -1,0 +1,29 @@
+---
+import { getCollection, type CollectionEntry } from 'astro:content';
+
+const words = await getCollection('word');
+type Props = CollectionEntry<'word'>;
+
+
+---
+<section>
+    <ul>
+        {
+            words.map((word: Props) => (
+                <li>
+                        <h2 class="title">{word.data.englishTitle}</h2>
+                       <p>
+                        {word.data.description}
+                       </p>
+                    
+                </li>
+            ))
+        }
+    </ul>
+</section>
+
+<style>
+    li {
+        list-style: none;
+    }
+</style>
